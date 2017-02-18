@@ -15,9 +15,6 @@
         .page-title {
             font-size: 4em;
         }
-        .page-place {
-            display: none;
-        }
         .place {
             font-size: 1.2em;
         }
@@ -69,7 +66,6 @@
 
                     placeEl[0].innerHtml = randomPlace.name;
                     placeImg[0].src = randomPlace.img;
-                    placeDiv[0].styles.display = 'block';
                 } else { console.error(xhr.statusText); }
             }
         };
