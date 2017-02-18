@@ -62,14 +62,14 @@
                     var res = JSON.parse(xhr.responseText);
                     var places = res.list;
                     var len = places.length;
-                    var placeDiv = document.getElementsByClassName('page-place')[0];
-                    var placeEl = document.getElementsByClassName('place')[0];
-                    var placeImg = document.getElementsByClassName('place-img')[0];
+                    var placeDiv = document.getElementsByClassName('page-place');
+                    var placeEl = document.getElementsByClassName('place');
+                    var placeImg = document.getElementsByClassName('place-img');
                     var randomPlace = places[Math.floor(Math.random() * len)];
 
-                    placeEl.innerHtml = randomPlace.name;
-                    placeImg.src = randomPlace.img;
-                    placeDiv.styles.display = 'block';
+                    placeEl[0].innerHtml = randomPlace.name;
+                    placeImg[0].src = randomPlace.img;
+                    placeDiv[0].styles.display = 'block';
                 } else { console.error(xhr.statusText); }
             }
         };
