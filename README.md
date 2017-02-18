@@ -4,7 +4,7 @@
 
 Well, I think that bacon should be selling **everywhere**.
 
-So, if you too want to buy bacon everywhere, help me spread the word (and bacon) on this magical, magnificent and full of wonders place called internet to reach as much people ~~and places to sell bacon~~ as we can!
+So, if you want to buy bacon everywhere too, help me spread the word (and bacon) on this magical, magnificent and full of wonders place called internet to reach as much people ~~and places to sell bacon~~ as we can!
 
 ## I want to help. How can I do that?
 
