@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Where people should be selling bacon?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            text-align: center;
+            word-wrap: break-word;
+        }
+        .page-title {
+            font-size: 4em;
+        }
+        .page-place {
+            display: none;
+        }
+        .place {
+            font-size: 1.2em;
+        }
+        .place-img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            padding: 20px 10px;
+            border-top: 1px solid #ccc;
+        }
+        .credits {
+            font-size: 11px;
+        }
+        .stroke {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
     <h1 class="page-title">Where people should be selling bacon?</h1>
@@ -14,6 +47,12 @@
         <img src="" alt="" class="place-img">
     </div>
 
+    <footer class="footer">
+        <p class="credits">
+            Made with <span class="stroke">love</span> bacon by Guilherme Marconi
+        </p>
+    </footer>
+
     <script>
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "places.json", true);
@@ -23,14 +62,14 @@
                     var res = JSON.parse(xhr.responseText);
                     var places = res.list;
                     var len = places.length;
-                    var placeDiv = document.getElementsByClassName('page-place');
-                    var placeEl = document.getElementsByClassName('place');
-                    var placeImg = document.getElementsByClassName('place-img');
+                    var placeDiv = document.getElementsByClassName('page-place')[0];
+                    var placeEl = document.getElementsByClassName('place')[0];
+                    var placeImg = document.getElementsByClassName('place-img')[0];
                     var randomPlace = places[Math.floor(Math.random() * len)];
 
                     placeEl.innerHtml = randomPlace.name;
                     placeImg.src = randomPlace.img;
-                    placeDiv.style.display = 'block';
+                    placeDiv.styles.display = 'block';
                 } else { console.error(xhr.statusText); }
             }
         };
