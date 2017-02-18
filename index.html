@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Where people should be selling bacon?</title>
+</head>
+<body>
+    <h1 class="page-title">Where people should be selling bacon?</h1>
+
+    <div class="page-place">
+        <h2 class="where">People should be selling bacon in <span class="place"></span></h2>
+
+        <img src="" alt="" class="place-img">
+    </div>
+
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/places.json", true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    var res = JSON.parse(xhr.responseText);
+                    var places = res.list;
+                    var len = places.length;
+                    var placeDiv = document.getElementsByClassName('page-place');
+                    var placeEl = document.getElementsByClassName('place');
+                    var placeImg = document.getElementsByClassName('place-img');
+                    var randomPlace = places[Math.floor(Math.random() * len)];
+
+                    placeEl.innerHtml = randomPlace.name;
+                    placeImg.src = randomPlace.img;
+                    placeDiv.style.display = 'block';
+                } else { console.error(xhr.statusText); }
+            }
+        };
+        xhr.onerror = function (e) { console.error(xhr.statusText); };
+        xhr.send(null);
+    </script>
+</body>
+</html>
