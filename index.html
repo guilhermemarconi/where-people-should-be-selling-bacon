@@ -64,7 +64,7 @@
                     var placeImg = document.getElementsByClassName('place-img');
                     var randomPlace = places[Math.floor(Math.random() * len)];
 
-                    placeEl[0].innerHtml = randomPlace.name;
+                    placeEl[0].innerText = randomPlace.name;
                     placeImg[0].src = randomPlace.img;
                 } else { console.error(xhr.statusText); }
             }
