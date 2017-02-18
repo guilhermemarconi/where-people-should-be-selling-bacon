@@ -43,6 +43,8 @@
     </style>
 </head>
 <body>
+    <div id="fb-root"></div>
+
     <h1 class="page-title">Where people should be selling bacon?</h1>
 
     <div class="page-place">
@@ -54,6 +56,7 @@
     <footer class="footer">
         <p class="credits">
             Made with <span class="stroke">love</span> bacon by Guilherme Marconi
+            <div class="fb-like" data-href="https://guilhermemarconi.github.io/where-people-should-be-selling-bacon/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
         </p>
     </footer>
 
@@ -88,6 +91,15 @@
 
         ga('create', 'UA-80923712-2', 'auto');
         ga('send', 'pageview');
+    </script>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 </html>
