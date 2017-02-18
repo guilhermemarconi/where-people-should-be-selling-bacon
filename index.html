@@ -17,6 +17,7 @@
         }
         .place {
             font-size: 1.2em;
+            text-decoration: underline;
         }
         .place-img {
             display: inline-block;
@@ -59,7 +60,6 @@
                     var res = JSON.parse(xhr.responseText);
                     var places = res.list;
                     var len = places.length;
-                    var placeDiv = document.getElementsByClassName('page-place');
                     var placeEl = document.getElementsByClassName('place');
                     var placeImg = document.getElementsByClassName('place-img');
                     var randomPlace = places[Math.floor(Math.random() * len)];
