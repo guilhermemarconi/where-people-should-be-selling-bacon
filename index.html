@@ -16,7 +16,7 @@
 
     <script>
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "/places.json", true);
+        xhr.open("GET", "places.json", true);
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
